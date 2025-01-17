@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Result</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <% if (weather) { %>
+        <h1>Weather in <%= weather.name %></h1>
+        <p>Temperature: <%= weather.main.temp %>°C</p>
+        <p>Weather: <%= weather.weather[0].description %></p>
+        <p>Humidity: <%= weather.main.humidity %>%</p>
+        <p>Wind Speed: <%= weather.wind.speed %> m/s</p>
+    <% } else { %>
+        <p><%= error %></p>
+    <% } %>
+    <a href="/">Back to Home</a>
+</body>
+</html>
